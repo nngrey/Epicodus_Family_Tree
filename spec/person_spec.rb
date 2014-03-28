@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Person do
   it { should validate_presence_of :name }
+  it {should have_and_belong_to_many :relationships}
 
   context '#spouse' do
     it 'returns the person with their spouse_id' do
